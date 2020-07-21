@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks | Tomás E. Müller Bravo</title>
+    <link>https://temuller.github.io/talk/</link>
+      <atom:link href="https://temuller.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2020`</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://temuller.github.io/talk/</link>
+    </image>
+    
+    <item>
+      <title>Cosmology with VEILS: Building an Infrared SN Ia Hubble Diagram</title>
+      <link>https://temuller.github.io/talk/la-serena-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/talk/la-serena-2019/</guid>
+      <description>&lt;p&gt;Aura, La Serena, Chile&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cosmology with VEILS: Building an Infrared SN Ia Hubble Diagram</title>
+      <link>https://temuller.github.io/talk/eso-chile-2018/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/talk/eso-chile-2018/</guid>
+      <description>&lt;p&gt;European Southern Observatory, Santiago, Chile&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Type Ia Supernova Cosmology: infrared light as a new window</title>
+      <link>https://temuller.github.io/talk/charles-university-2018/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/talk/charles-university-2018/</guid>
+      <description>&lt;p&gt;Charles University, Prague, Czech Republic&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

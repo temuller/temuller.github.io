@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meetings | Tomás E. Müller Bravo</title>
+    <link>https://temuller.github.io/meeting/</link>
+      <atom:link href="https://temuller.github.io/meeting/index.xml" rel="self" type="application/rss+xml" />
+    <description>Meetings</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2020`</copyright><lastBuildDate>Mon, 16 Apr 2018 00:00:00 +0100</lastBuildDate>
+    <image>
+      <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Meetings</title>
+      <link>https://temuller.github.io/meeting/</link>
+    </image>
+    
+    <item>
+      <title>Software Carpentry Workshop</title>
+      <link>https://temuller.github.io/meeting/scw_max_planck_2018/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0100</pubDate>
+      <guid>https://temuller.github.io/meeting/scw_max_planck_2018/</guid>
+      <description>&lt;p&gt;A 2-days Software Carpentry Workshop to teach PGR students at the Max Planck Institute for Plasma Physics (Greifswald) the basic of Shell, Python and Git.&lt;/p&gt;
+&lt;p&gt;Dates: Apr 16-17, 2018&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://temuller.github.io/2018-04-16-maxplanck/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Workshop website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Software Carpentry Workshop</title>
+      <link>https://temuller.github.io/meeting/scw_soton_2018/</link>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0100</pubDate>
+      <guid>https://temuller.github.io/meeting/scw_soton_2018/</guid>
+      <description>&lt;p&gt;A 2-days Software Carpentry Workshop to teach PGR students at the University of Southampton the basic of Shell, Python and Git.&lt;/p&gt;
+&lt;p&gt;Dates: Apr 12-13, 2018&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://southampton-rsg.github.io/2018-04-12-southampton-swc/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Workshop website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

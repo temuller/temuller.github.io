@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anders Jerkstrand ... | Tomás E. Müller Bravo</title>
+    <link>https://temuller.github.io/author/anders-jerkstrand-.../</link>
+      <atom:link href="https://temuller.github.io/author/anders-jerkstrand-.../index.xml" rel="self" type="application/rss+xml" />
+    <description>Anders Jerkstrand ...</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2020`</copyright>
+    <image>
+      <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Anders Jerkstrand ...</title>
+      <link>https://temuller.github.io/author/anders-jerkstrand-.../</link>
+    </image>
+    
+    <item>
+      <title>The low-luminosity type II SN 2016aqf: A well-monitored spectral evolution of the Ni/Fe abundance ratio</title>
+      <link>https://temuller.github.io/publication/muller_bravo_2020/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/muller_bravo_2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1644 @@
+<!DOCTYPE html><html lang="en-gb" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Tomás E. Müller Bravo">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="import matplotlib.pyplot as plt import seaborn as sns import numpy as np import pandas as pd import scipy import lmfit import emcee #import pymc3 import pystan import iminuit from iminuit.util import describe, make_func_code from keras.">
+
+  
+  <link rel="alternate" hreflang="en-gb" href="https://temuller.github.io/post/fitting_data/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://temuller.github.io/post/fitting_data/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Tomás E. Müller Bravo">
+  <meta property="og:url" content="https://temuller.github.io/post/fitting_data/">
+  <meta property="og:title" content="Fitting Data | Tomás E. Müller Bravo">
+  <meta property="og:description" content="import matplotlib.pyplot as plt import seaborn as sns import numpy as np import pandas as pd import scipy import lmfit import emcee #import pymc3 import pystan import iminuit from iminuit.util import describe, make_func_code from keras."><meta property="og:image" content="https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-gb">
+  
+    
+      <meta property="article:published_time" content="2020-07-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-07-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://temuller.github.io/post/fitting_data/"
+  },
+  "headline": "Fitting Data",
+  
+  "datePublished": "2020-07-17T00:00:00Z",
+  "dateModified": "2020-07-17T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Tomás E. Müller Bravo"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tomás E. Müller Bravo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "import matplotlib.pyplot as plt import seaborn as sns import numpy as np import pandas as pd import scipy import lmfit import emcee #import pymc3 import pystan import iminuit from iminuit.util import describe, make_func_code from keras."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Fitting Data | Tomás E. Müller Bravo</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Tomás E. Müller Bravo</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Tomás E. Müller Bravo</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#skills"><span>Skills</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#accomplishments"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#meetings"><span>Workshops</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Fitting Data</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 17, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <pre><code class="language-python">import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+
+import scipy
+import lmfit
+import emcee
+#import pymc3
+import pystan
+import iminuit
+from iminuit.util import describe, make_func_code
+
+from keras.layers import Dense, Activation
+from keras.models import Sequential
+
+from multiprocessing import Pool
+from chainconsumer import ChainConsumer
+
+sns.set(context='talk', style='white')
+%config InlineBackend.figure_format = 'retina'
+
+np.random.seed(32)
+</code></pre>
+<p>This example was taken from the <code>emcee</code> documentation.</p>
+<p>To avoid correlation between parameters in this case, one would need to shift the x-axis by the mean value, but I will ommit that in here for simplicity.</p>
+<pre><code class="language-python"># Choose the &quot;true&quot; parameters.
+m_true = -0.9594
+b_true = 4.294
+f_true = 0.534
+
+# Generate some synthetic data from the model.
+N = 50
+x = np.sort(10 * np.random.rand(N))
+yerr = 0.1 + 0.5 * np.random.rand(N)
+y = m_true * x + b_true
+y += np.abs(f_true * y) * np.random.randn(N)
+y += yerr * np.random.randn(N)
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+x0 = np.linspace(0, 10, 500)
+plt.plot(x0, m_true * x0 + b_true, &quot;k&quot;, alpha=0.3, lw=3)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+</code></pre>
+<p><img src="basic_fitting_routines_3_0.png" alt="png"></p>
+<h2 id="scipy---minimize">scipy - minimize</h2>
+<pre><code class="language-python">def log_likelihood(theta, x, y, yerr):
+    m, b = theta
+    model = m*x + b
+    sigma2 = yerr**2
+    return np.sum((y - model)**2 / sigma2)
+
+p0 = np.array([m_true, b_true]) + 0.1 * np.random.randn(2)
+results = scipy.optimize.minimize(log_likelihood, p0, args=(x, y, yerr))
+
+m_pred, b_pred = results.x
+
+y_pred = m_pred*x0 + b_pred
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+
+print(f'm = {m_pred:.4f} (m_true = {m_true})')
+print(f'b = {b_pred:.3f} (b_true = {b_true})')
+</code></pre>
+<p><img src="basic_fitting_routines_5_0.png" alt="png"></p>
+<pre><code>m = -0.8139 (m_true = -0.9594)
+b = 3.792 (b_true = 4.294)
+</code></pre>
+<h2 id="scipy---curve_fit">scipy - curve_fit</h2>
+<pre><code class="language-python">def function(x, m, b):
+    model = m*x + b
+    return model
+
+p0 = np.array([m_true, b_true]) + 0.1 * np.random.randn(2)
+pfit, pcov = scipy.optimize.curve_fit(function, x, y, p0=p0, sigma=yerr)
+
+m_pred, b_pred = pfit
+m_std, b_std = np.sqrt(pcov[0, 0]), np.sqrt(pcov[1, 1])
+
+y_pred = m_pred*x0 + b_pred
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+
+print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
+print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
+</code></pre>
+<p><img src="basic_fitting_routines_7_0.png" alt="png"></p>
+<pre><code>m = -0.8139 +/- 0.0647 (m_true = -0.9594)
+b = 3.792 +/- 0.344 (b_true = 4.294)
+</code></pre>
+<h2 id="scipy---leastsq">scipy - leastsq</h2>
+<pre><code class="language-python">def residual_function(theta, x, y, yerr):
+    m, b = theta
+    model = m*x + b
+    return (model - y)/yerr
+
+p0 = np.array([m_true, b_true]) + 0.1 * np.random.randn(2)
+pfit, pcov, infodict, errmsg, success = scipy.optimize.leastsq(residual_function, p0, 
+                                                               args=(x, y, yerr), 
+                                                               full_output=1)
+
+m_pred, b_pred = pfit
+try:
+    m_std, b_std = np.sqrt(pcov[0, 0]), np.sqrt(pcov[1, 1])
+except:
+    m_std = b_std = np.inf
+
+y_pred = m_pred*x0 + b_pred
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+
+print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
+print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
+</code></pre>
+<p><img src="basic_fitting_routines_9_0.png" alt="png"></p>
+<pre><code>m = -0.8139 +/- 0.0127 (m_true = -0.9594)
+b = 3.792 +/- 0.068 (b_true = 4.294)
+</code></pre>
+<h2 id="lmfit">lmfit</h2>
+<pre><code class="language-python">def residual_function(params, x, y, yerr):
+    m, b = params['m'].value, params['b'].value
+    model = m*x + b
+    return ((model - y)/yerr)**2
+
+p0 = np.array([m_true, b_true]) + 0.1 * np.random.randn(2)
+params = lmfit.Parameters()
+params.add('m', value=p0[0])
+params.add('b', value=p0[1])
+results = lmfit.minimizer.minimize(residual_function, params, args=(x, y, yerr)
+                                   , method='lbfgsb')
+
+m_pred, b_pred = results.params['m'].value, results.params['b'].value
+m_std, b_std = results.params['m'].stderr, results.params['b'].stderr
+if m_std is None and b_std is None:
+    m_std = b_std = np.inf
+
+y_pred = m_pred*x0 + b_pred
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+
+print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
+print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
+</code></pre>
+<p><img src="basic_fitting_routines_11_0.png" alt="png"></p>
+<pre><code>m = -0.8605 +/- inf (m_true = -0.9594)
+b = 4.010 +/- inf (b_true = 4.294)
+</code></pre>
+<h2 id="iminuit">iminuit</h2>
+<pre><code class="language-python">from iminuit import Minuit
+
+def line(m, b, x, y):
+    return m*x + b
+
+def residual_function(m, b):
+    #b, m = theta
+    model = line(m, b, x, y)
+    return np.sum(((model - y)/yerr)**2)
+
+minu = Minuit(residual_function)
+
+minu.migrad()  # run optimiser
+minu.hesse()   # run covariance estimator
+minu.minos()  # run minos estimator
+
+m_pred, b_pred = minu.values.values()
+m_std, b_std = minu.errors.values()
+m_std_max, b_std_max, m_std_min, b_std_min = minu.merrors.values()
+
+y_pred = m_pred*x0 + b_pred
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+
+print('Hesse')
+print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
+print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
+print('Minos')
+print(f'm = {m_pred:.4f} +/- ({m_std_min:.4f}, {m_std_max:.4f}) (m_true = {m_true})')
+print(f'b = {b_pred:.3f} +/- ({b_std_min:.3f}, {b_std_max:.3f}) (b_true = {b_true})')
+
+minu.draw_mncontour('m', 'b', nsigma=3)
+</code></pre>
+<p><img src="basic_fitting_routines_13_1.png" alt="png"></p>
+<pre><code>Hesse
+m = -0.8139 +/- 0.0127 (m_true = -0.9594)
+b = 3.792 +/- 0.068 (b_true = 4.294)
+Minos
+m = -0.8139 +/- (-0.0127, 0.0127) (m_true = -0.9594)
+b = 3.792 +/- (-0.068, 0.068) (b_true = 4.294)
+
+
+
+
+
+&lt;matplotlib.contour.ContourSet at 0x7fd0b817a208&gt;
+</code></pre>
+<p><img src="basic_fitting_routines_13_4.png" alt="png"></p>
+<hr>
+<hr>
+<h1 id="mcmc-inference">MCMC inference</h1>
+<p>There are a couple of packages for plotting the samples with these methods. One is <code>corner</code>, which is well known by most people I would say, and the other one, which I actually prefer and use here, is <code>chainconsumer</code>.</p>
+<hr>
+<h2 id="emcee">emcee</h2>
+<pre><code class="language-python">def log_like(theta, x, y, yerr):
+    m, b = theta
+    model = m*x + b
+    sigma2 = yerr ** 2
+    return -0.5 * np.sum((y - model)**2/sigma2 + np.log(sigma2))
+
+def log_prior(theta):
+    m, b = theta
+    if -5.0 &lt; m &lt; 0.5 and 0.0 &lt; b &lt; 10.0:
+        return 0.0
+    return -np.inf
+
+def log_probability(theta, x, y, yerr):
+    lp = log_prior(theta)
+    if not np.isfinite(lp):
+        return -np.inf
+    return lp + log_like(theta, x, y, yerr)
+
+pos = np.array([m_true, b_true]) + 1e-4*np.random.randn(32, 2)
+nwalkers, ndim = pos.shape
+
+with Pool() as pool:
+    sampler = emcee.EnsembleSampler(nwalkers, ndim, log_probability, 
+                                    args=(x, y, yerr), pool=pool)
+    sampler.run_mcmc(pos, 4000, progress=True)
+
+samples = sampler.chain[:, 1000:, :].reshape((-1, ndim))
+</code></pre>
+<pre><code>100%|██████████| 4000/4000 [00:13&lt;00:00, 288.01it/s]
+</code></pre>
+<pre><code class="language-python">cc = ChainConsumer()
+cc.add_chain(samples, parameters=['m', 'b'])
+
+# plot chains
+fig = cc.plotter.plot_walks(truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true}, convolve=100)
+plt.show()
+
+# plot contours
+fig = cc.plotter.plot(figsize=float(ndim), truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true})
+plt.show()
+</code></pre>
+<p><img src="basic_fitting_routines_17_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_17_1.png" alt="png"></p>
+<pre><code class="language-python">m_mcmc = np.percentile(samples[:, 0], [16, 50, 84])
+b_mcmc = np.percentile(samples[:, 1], [16, 50, 84])
+m_pred, b_pred = m_mcmc[1], b_mcmc[1]
+m_std_min, m_std_max = np.diff(m_mcmc)
+b_std_min, b_std_max = np.diff(b_mcmc)
+
+y_pred = m_pred*x0 + b_pred
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+
+print(f'm = {m_pred:.4f} +/- ({m_std_min:.4f}, {m_std_max:.4f}) (m_true = {m_true})')
+print(f'b = {b_pred:.4f} +/- ({b_std_min:.4f}, {b_std_max:.4f}) (b_true = {b_true})')
+</code></pre>
+<p><img src="basic_fitting_routines_18_0.png" alt="png"></p>
+<pre><code>m = -0.8131 +/- (0.0127, 0.0124) (m_true = -0.9594)
+b = 3.7896 +/- (0.0679, 0.0674) (b_true = 4.294)
+</code></pre>
+<h2 id="pystan">pystan</h2>
+<pre><code class="language-python">model = &quot;&quot;&quot;
+        data {
+            int&lt;lower=0&gt; N;
+            vector[N] x;
+            vector[N] y;
+        }
+        parameters {
+            real m;
+            real b;
+            real&lt;lower=0&gt; sigma;
+        }
+        model {
+            y ~ normal(b + m*x, sigma);
+        }
+        &quot;&quot;&quot;
+
+data = {'N': len(x), 'x': x, 'y': y}
+
+# Compile the model
+sm = pystan.StanModel(model_code=model)
+
+# Train the model and generate samples
+fit = sm.sampling(data=data, iter=1000, chains=4, warmup=500, thin=1, seed=101)
+</code></pre>
+<pre><code>INFO:pystan:COMPILING THE C++ CODE FOR MODEL anon_model_1defb22038d84b88c73c6495096e3e42 NOW.
+</code></pre>
+<pre><code class="language-python">summary_dict = fit.summary()
+df = pd.DataFrame(summary_dict['summary'], 
+                  columns=summary_dict['summary_colnames'], 
+                  index=summary_dict['summary_rownames'])
+
+m_pred, b_pred = df['mean']['m'], df['mean']['b']
+m_std, b_std = df['sd']['m'], df['sd']['b']
+
+# Extracting traces
+m_trace = fit['m']
+b_trace = fit['b']
+sigma = fit['sigma']
+lp = fit['lp__']
+
+y_pred = m_pred*x0 + b_pred
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+
+print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
+print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
+</code></pre>
+<p><img src="basic_fitting_routines_21_0.png" alt="png"></p>
+<pre><code>m = -0.7944 +/- 0.0828 (m_true = -0.9594)
+b = 3.595 +/- 0.492 (b_true = 4.294)
+</code></pre>
+<pre><code class="language-python">cc = ChainConsumer()
+cc.add_chain(np.array([m_trace, b_trace]).T, parameters=['m', 'b'])
+
+# plot chains
+fig = cc.plotter.plot_walks(truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true}, convolve=100)
+plt.show()
+
+# plot contours
+fig = cc.plotter.plot(figsize=float(ndim), truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true})
+plt.show()
+</code></pre>
+<p><img src="basic_fitting_routines_22_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_22_1.png" alt="png"></p>
+<h2 id="pymc3">pymc3</h2>
+<pre><code class="language-python">basic_model = pymc3.Model()
+
+with basic_model:
+    
+    p0 = np.array([m_true, b_true]) + 0.1 * np.random.randn(2)
+    # Priors for unknown model parameters
+    m = pymc3.Normal('m', mu=p0[0], sigma=2)
+    b = pymc3.Normal('b', mu=p0[1], sigma=5)
+    sigma = pymc3.HalfNormal('sigma', sigma=1)
+
+    # Expected value of outcome
+    model =m*x + b
+
+    # Likelihood (sampling distribution) of observations
+    Y_obs = pymc3.Normal('Y_obs', mu=model, sigma=sigma, observed=y)
+    
+map_estimate = pymc3.find_MAP(model=basic_model)
+
+with basic_model:
+   # instantiate sampler
+    step = pymc3.Slice()
+
+    # draw 5000 posterior samples
+    trace = pymc3.sample(5000, step=step)
+
+pymc3.traceplot(trace);
+pymc3.summary(trace).round(2)
+</code></pre>
+<h2 id="other-packages">Other packages</h2>
+<p>There are other packages for performing MCMC inference like: <code>Pyro/NumPyro</code>, <code>mici</code>, <code>TensorFlow Probability</code> and <code>Sampyl</code>.</p>
+<hr>
+<hr>
+<h1 id="neural-networks-regression">Neural Networks regression</h1>
+<p>The NN will fit the data without a given model. A proper fit would require training sets, testing sets and cross validation, but here only the most basic implementation is shown.</p>
+<pre><code class="language-python"># NN model
+model = Sequential()
+model.add(Dense(32, activation = 'relu'))
+model.add(Dense(units = 32, activation = 'relu'))
+model.add(Dense(units = 32, activation = 'relu'))
+model.add(Dense(units = 1))
+
+# Compiling the ANN
+model.compile(optimizer = 'adam', loss = 'mean_squared_error')
+
+model.fit(x[:, None], y, batch_size = 10, epochs = 100, verbose=0)
+
+y_pred = model.predict(x[:, None])
+y_true = m_true*x0 + b_true
+
+plt.errorbar(x, y, yerr=yerr, fmt=&quot;.k&quot;, capsize=0)
+plt.plot(x0, y_true, &quot;k&quot;, alpha=0.3, lw=3, label=&quot;truth&quot;)
+#plt.plot(x0, y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.plot(x[:, None], y_pred, &quot;:k&quot;, label=&quot;fit&quot;)
+plt.legend(fontsize=14)
+plt.xlim(0, 10)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;y&quot;)
+plt.show()
+</code></pre>
+<p><img src="basic_fitting_routines_27_0.png" alt="png"></p>
+<pre><code class="language-python">
+</code></pre>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/data-science/">data science</a>
+  
+  <a class="badge badge-light" href="/tag/hugo/">hugo</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://temuller.github.io/post/fitting_data/&amp;text=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://temuller.github.io/post/fitting_data/&amp;t=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Fitting%20Data&amp;body=https://temuller.github.io/post/fitting_data/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://temuller.github.io/post/fitting_data/&amp;title=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Fitting%20Data%20https://temuller.github.io/post/fitting_data/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://temuller.github.io/post/fitting_data/&amp;title=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/tomas-e.-muller-bravo/avatar_hu5552821b53fb33cd8671b5dfe810ae74_34122_270x270_fill_q90_lanczos_center.jpg" alt="Tomás E. Müller Bravo">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://temuller.github.io/">Tomás E. Müller Bravo</a></h5>
+        <h6 class="card-subtitle">PhD candidate in Astrophysics</h6>
+        <p class="card-text">My research interests include Supernovae, Cosmology and Data Science.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:t.e.muller-bravo@soton.ac.uk" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=8BwDBYoAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/temuller" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0003-3939-7167" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/linkedin.com/in/tom%c3%a1s-m%c3%bcller-bravo-57a8731a9" >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © Tomás Müller <code>2020</code>
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prieto, J. L. | Tomás E. Müller Bravo</title>
+    <link>https://temuller.github.io/author/prieto-j.-l./</link>
+      <atom:link href="https://temuller.github.io/author/prieto-j.-l./index.xml" rel="self" type="application/rss+xml" />
+    <description>Prieto, J. L.</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2020`</copyright>
+    <image>
+      <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Prieto, J. L.</title>
+      <link>https://temuller.github.io/author/prieto-j.-l./</link>
+    </image>
+    
+    <item>
+      <title>Supernova progenitors, their variability and the Type IIP Supernova ASASSN-16fq in M66 </title>
+      <link>https://temuller.github.io/publication/kochaneck_2017/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/kochaneck_2017/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
