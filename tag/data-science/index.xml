@@ -13,11 +13,19 @@
     </image>
     
     <item>
-      <title>Fitting Data</title>
+      <title>Fitting Data - Basic implementation of Python packages</title>
       <link>https://temuller.github.io/post/fitting_data/</link>
       <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/post/fitting_data/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
+      <description>&lt;p&gt;In this notebook I show some basic implementation of different Python packages for data fitting. The idea is to learn the different options there are out there so the reader can then study them in more detail if needed.
+This notebook can be opened on 
+&lt;a href=&#34;https://colab.research.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google colab&lt;/a&gt; or 
+&lt;a href=&#34;https://mybinder.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;binder&lt;/a&gt;. If for some reason there is a package missing, you will need to manually install it by running &lt;code&gt;!pip install &amp;lt;package&amp;gt;&lt;/code&gt; in a cell.&lt;/p&gt;
+&lt;p&gt;To open this notebook on google colab, click in the following icon: 
+&lt;a href=&#34;https://colab.research.google.com/github/temuller/personal_website/blob/master/content/post/fitting_data/basic_fitting_routines.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To open this notebook on binder, click in the following icon: 
+&lt;a href=&#34;https://mybinder.org/v2/gh/temuller/personal_website/master?filepath=content%2Fpost%2Ffitting_data%2Fbasic_fitting_routines.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://mybinder.org/badge_logo.svg&#34; alt=&#34;Binder&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import pandas as pd
@@ -25,7 +33,7 @@ import pandas as pd
 import scipy
 import lmfit
 import emcee
-#import pymc3
+#import pymc3  # borken installation?
 import pystan
 import iminuit
 from iminuit.util import describe, make_func_code
@@ -34,15 +42,15 @@ from keras.layers import Dense, Activation
 from keras.models import Sequential
 
 from multiprocessing import Pool
-from chainconsumer import ChainConsumer
+import corner
 
 sns.set(context=&#39;talk&#39;, style=&#39;white&#39;)
 %config InlineBackend.figure_format = &#39;retina&#39;
 
 np.random.seed(32)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This example was taken from the &lt;code&gt;emcee&lt;/code&gt; documentation.&lt;/p&gt;
-&lt;p&gt;To avoid correlation between parameters in this case, one would need to shift the x-axis by the mean value, but I will ommit that in here for simplicity.&lt;/p&gt;
+&lt;p&gt;This example, which represents data taken from a line, was taken from the &lt;code&gt;emcee&lt;/code&gt; documentation.&lt;/p&gt;
+&lt;p&gt;To avoid correlation between parameters in this case, one would need to shift the x-axis by the mean value, but I will ommit that in here for simplicity. I will only show how to implement the different packages.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Choose the &amp;quot;true&amp;quot; parameters.
 m_true = -0.9594
 b_true = 4.294
@@ -64,7 +72,7 @@ plt.xlabel(&amp;quot;x&amp;quot;)
 plt.ylabel(&amp;quot;y&amp;quot;)
 plt.show()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_3_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_4_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;scipy---minimize&#34;&gt;scipy - minimize&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def log_likelihood(theta, x, y, yerr):
     m, b = theta
@@ -92,7 +100,7 @@ plt.show()
 print(f&#39;m = {m_pred:.4f} (m_true = {m_true})&#39;)
 print(f&#39;b = {b_pred:.3f} (b_true = {b_true})&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_5_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_6_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;m = -0.8139 (m_true = -0.9594)
 b = 3.792 (b_true = 4.294)
 &lt;/code&gt;&lt;/pre&gt;
@@ -122,7 +130,7 @@ plt.show()
 print(f&#39;m = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})&#39;)
 print(f&#39;b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_7_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_8_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;m = -0.8139 +/- 0.0647 (m_true = -0.9594)
 b = 3.792 +/- 0.344 (b_true = 4.294)
 &lt;/code&gt;&lt;/pre&gt;
@@ -158,7 +166,7 @@ plt.show()
 print(f&#39;m = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})&#39;)
 print(f&#39;b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_9_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_10_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;m = -0.8139 +/- 0.0127 (m_true = -0.9594)
 b = 3.792 +/- 0.068 (b_true = 4.294)
 &lt;/code&gt;&lt;/pre&gt;
@@ -195,7 +203,7 @@ plt.show()
 print(f&#39;m = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})&#39;)
 print(f&#39;b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_11_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_12_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;m = -0.8605 +/- inf (m_true = -0.9594)
 b = 4.010 +/- inf (b_true = 4.294)
 &lt;/code&gt;&lt;/pre&gt;
@@ -241,7 +249,18 @@ print(f&#39;b = {b_pred:.3f} +/- ({b_std_min:.3f}, {b_std_max:.3f}) (b_true = {b
 
 minu.draw_mncontour(&#39;m&#39;, &#39;b&#39;, nsigma=3)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_13_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter m does not have initial value. Assume 0.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter m is floating but does not have initial step size. Assume 1.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter b does not have initial value. Assume 0.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter b is floating but does not have initial step size. Assume 1.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: errordef is not given. Default to 1.
+  # This is added back by InteractiveShellApp.init_path()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_14_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Hesse
 m = -0.8139 +/- 0.0127 (m_true = -0.9594)
 b = 3.792 +/- 0.068 (b_true = 4.294)
@@ -255,7 +274,7 @@ b = 3.792 +/- (-0.068, 0.068) (b_true = 4.294)
 
 &amp;lt;matplotlib.contour.ContourSet at 0x7fd0b817a208&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_13_4.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_14_4.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;mcmc-inference&#34;&gt;MCMC inference&lt;/h1&gt;
@@ -290,21 +309,26 @@ with Pool() as pool:
 
 samples = sampler.chain[:, 1000:, :].reshape((-1, ndim))
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;100%|██████████| 4000/4000 [00:13&amp;lt;00:00, 288.01it/s]
+&lt;pre&gt;&lt;code&gt;100%|██████████| 4000/4000 [00:54&amp;lt;00:00, 73.10it/s]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cc = ChainConsumer()
-cc.add_chain(samples, parameters=[&#39;m&#39;, &#39;b&#39;])
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, axes = plt.subplots(ndim, figsize=(10, 5), sharex=True)
+labels = [&amp;quot;m&amp;quot;, &amp;quot;b&amp;quot;]
 
-# plot chains
-fig = cc.plotter.plot_walks(truth={&amp;quot;m&amp;quot;: m_true, &amp;quot;b&amp;quot;: b_true}, convolve=100)
-plt.show()
+for i in range(ndim):
+    ax = axes[i]
+    ax.plot(samples[:, i], &amp;quot;k&amp;quot;, alpha=0.6)
+    ax.set_xlim(0, len(samples))
+    ax.set_ylabel(labels[i])
+    ax.yaxis.set_label_coords(-0.1, 0.5)
 
-# plot contours
-fig = cc.plotter.plot(figsize=float(ndim), truth={&amp;quot;m&amp;quot;: m_true, &amp;quot;b&amp;quot;: b_true})
-plt.show()
+axes[-1].set_xlabel(&amp;quot;step number&amp;quot;);
+
+fig = corner.corner(
+    samples, labels=labels, truths=[m_true, b_true]
+);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_17_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_17_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_18_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_18_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;m_mcmc = np.percentile(samples[:, 0], [16, 50, 84])
 b_mcmc = np.percentile(samples[:, 1], [16, 50, 84])
 m_pred, b_pred = m_mcmc[1], b_mcmc[1]
@@ -326,7 +350,7 @@ plt.show()
 print(f&#39;m = {m_pred:.4f} +/- ({m_std_min:.4f}, {m_std_max:.4f}) (m_true = {m_true})&#39;)
 print(f&#39;b = {b_pred:.4f} +/- ({b_std_min:.4f}, {b_std_max:.4f}) (b_true = {b_true})&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_18_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_19_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;m = -0.8131 +/- (0.0127, 0.0124) (m_true = -0.9594)
 b = 3.7896 +/- (0.0679, 0.0674) (b_true = 4.294)
 &lt;/code&gt;&lt;/pre&gt;
@@ -386,23 +410,30 @@ plt.show()
 print(f&#39;m = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})&#39;)
 print(f&#39;b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_21_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_22_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;m = -0.7944 +/- 0.0828 (m_true = -0.9594)
 b = 3.595 +/- 0.492 (b_true = 4.294)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cc = ChainConsumer()
-cc.add_chain(np.array([m_trace, b_trace]).T, parameters=[&#39;m&#39;, &#39;b&#39;])
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;samples = np.array([m_trace, b_trace]).T
+                   
+fig, axes = plt.subplots(ndim, figsize=(10, 5), sharex=True)
+labels = [&amp;quot;m&amp;quot;, &amp;quot;b&amp;quot;]
 
-# plot chains
-fig = cc.plotter.plot_walks(truth={&amp;quot;m&amp;quot;: m_true, &amp;quot;b&amp;quot;: b_true}, convolve=100)
-plt.show()
+for i in range(ndim):
+    ax = axes[i]
+    ax.plot(samples[:, i], &amp;quot;k&amp;quot;, alpha=0.6)
+    ax.set_xlim(0, len(samples))
+    ax.set_ylabel(labels[i])
+    ax.yaxis.set_label_coords(-0.1, 0.5)
 
-# plot contours
-fig = cc.plotter.plot(figsize=float(ndim), truth={&amp;quot;m&amp;quot;: m_true, &amp;quot;b&amp;quot;: b_true})
-plt.show()
+axes[-1].set_xlabel(&amp;quot;step number&amp;quot;);
+
+fig = corner.corner(
+    samples, labels=labels, truths=[m_true, b_true]
+);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_22_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_22_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_23_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_23_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;pymc3&#34;&gt;pymc3&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;basic_model = pymc3.Model()
 
@@ -433,11 +464,11 @@ pymc3.traceplot(trace);
 pymc3.summary(trace).round(2)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;other-packages&#34;&gt;Other packages&lt;/h2&gt;
-&lt;p&gt;There are other packages for performing MCMC inference like: &lt;code&gt;Pyro/NumPyro&lt;/code&gt;, &lt;code&gt;mici&lt;/code&gt;, &lt;code&gt;TensorFlow Probability&lt;/code&gt; and &lt;code&gt;Sampyl&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;There are other packages for performing MCMC inference like: &lt;code&gt;Pyro/NumPyro&lt;/code&gt;, &lt;code&gt;mici&lt;/code&gt;, &lt;code&gt;TensorFlow Probability&lt;/code&gt; and &lt;code&gt;Sampyl&lt;/code&gt; (I might be missing a couple though). Feel free to check those as well.&lt;/p&gt;
 &lt;hr&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;neural-networks-regression&#34;&gt;Neural Networks regression&lt;/h1&gt;
-&lt;p&gt;The NN will fit the data without a given model. A proper fit would require training sets, testing sets and cross validation, but here only the most basic implementation is shown.&lt;/p&gt;
+&lt;h1 id=&#34;artificial-neural-networks-ann-regression&#34;&gt;Artificial Neural Networks (ANN) regression&lt;/h1&gt;
+&lt;p&gt;The ANN will fit the data without a given model. A proper fit would require training sets, testing sets and cross validation, but here only the most basic implementation is shown. There is much more you can do with ANN.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# NN model
 model = Sequential()
 model.add(Dense(32, activation = &#39;relu&#39;))
@@ -463,7 +494,7 @@ plt.xlabel(&amp;quot;x&amp;quot;)
 plt.ylabel(&amp;quot;y&amp;quot;)
 plt.show()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_27_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;basic_fitting_routines_files/basic_fitting_routines_28_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;
 </description>

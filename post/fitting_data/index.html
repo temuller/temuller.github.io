@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="import matplotlib.pyplot as plt import seaborn as sns import numpy as np import pandas as pd import scipy import lmfit import emcee #import pymc3 import pystan import iminuit from iminuit.util import describe, make_func_code from keras.">
+  <meta name="description" content="In this notebook I show some basic implementation of different Python packages for data fitting. The idea is to learn the different options there are out there so the reader can then study them in more detail if needed.">
 
   
   <link rel="alternate" hreflang="en-gb" href="https://temuller.github.io/post/fitting_data/">
@@ -234,8 +234,8 @@
   
   <meta property="og:site_name" content="Tomás E. Müller Bravo">
   <meta property="og:url" content="https://temuller.github.io/post/fitting_data/">
-  <meta property="og:title" content="Fitting Data | Tomás E. Müller Bravo">
-  <meta property="og:description" content="import matplotlib.pyplot as plt import seaborn as sns import numpy as np import pandas as pd import scipy import lmfit import emcee #import pymc3 import pystan import iminuit from iminuit.util import describe, make_func_code from keras."><meta property="og:image" content="https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:title" content="Fitting Data - Basic implementation of Python packages | Tomás E. Müller Bravo">
+  <meta property="og:description" content="In this notebook I show some basic implementation of different Python packages for data fitting. The idea is to learn the different options there are out there so the reader can then study them in more detail if needed."><meta property="og:image" content="https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-gb">
   
     
@@ -267,7 +267,7 @@
     "@type": "WebPage",
     "@id": "https://temuller.github.io/post/fitting_data/"
   },
-  "headline": "Fitting Data",
+  "headline": "Fitting Data - Basic implementation of Python packages",
   
   "datePublished": "2020-07-17T00:00:00Z",
   "dateModified": "2020-07-17T00:00:00Z",
@@ -285,7 +285,7 @@
       "url": "https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "import matplotlib.pyplot as plt import seaborn as sns import numpy as np import pandas as pd import scipy import lmfit import emcee #import pymc3 import pystan import iminuit from iminuit.util import describe, make_func_code from keras."
+  "description": "In this notebook I show some basic implementation of different Python packages for data fitting. The idea is to learn the different options there are out there so the reader can then study them in more detail if needed."
 }
 </script>
 
@@ -303,7 +303,7 @@
 
 
 
-  <title>Fitting Data | Tomás E. Müller Bravo</title>
+  <title>Fitting Data - Basic implementation of Python packages | Tomás E. Müller Bravo</title>
 
 </head>
 
@@ -701,7 +701,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Fitting Data</h1>
+  <h1>Fitting Data - Basic implementation of Python packages</h1>
 
   
 
@@ -729,7 +729,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    9 min read
   </span>
   
 
@@ -765,7 +765,15 @@
   <div class="article-container">
 
     <div class="article-style">
-      <pre><code class="language-python">import matplotlib.pyplot as plt
+      <p>In this notebook I show some basic implementation of different Python packages for data fitting. The idea is to learn the different options there are out there so the reader can then study them in more detail if needed.
+This notebook can be opened on 
+<a href="https://colab.research.google.com/" target="_blank" rel="noopener">google colab</a> or 
+<a href="https://mybinder.org/" target="_blank" rel="noopener">binder</a>. If for some reason there is a package missing, you will need to manually install it by running <code>!pip install &lt;package&gt;</code> in a cell.</p>
+<p>To open this notebook on google colab, click in the following icon: 
+<a href="https://colab.research.google.com/github/temuller/personal_website/blob/master/content/post/fitting_data/basic_fitting_routines.ipynb" target="_blank" rel="noopener"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<p>To open this notebook on binder, click in the following icon: 
+<a href="https://mybinder.org/v2/gh/temuller/personal_website/master?filepath=content%2Fpost%2Ffitting_data%2Fbasic_fitting_routines.ipynb" target="_blank" rel="noopener"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a></p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import pandas as pd
@@ -773,7 +781,7 @@ import pandas as pd
 import scipy
 import lmfit
 import emcee
-#import pymc3
+#import pymc3  # borken installation?
 import pystan
 import iminuit
 from iminuit.util import describe, make_func_code
@@ -782,15 +790,15 @@ from keras.layers import Dense, Activation
 from keras.models import Sequential
 
 from multiprocessing import Pool
-from chainconsumer import ChainConsumer
+import corner
 
 sns.set(context='talk', style='white')
 %config InlineBackend.figure_format = 'retina'
 
 np.random.seed(32)
 </code></pre>
-<p>This example was taken from the <code>emcee</code> documentation.</p>
-<p>To avoid correlation between parameters in this case, one would need to shift the x-axis by the mean value, but I will ommit that in here for simplicity.</p>
+<p>This example, which represents data taken from a line, was taken from the <code>emcee</code> documentation.</p>
+<p>To avoid correlation between parameters in this case, one would need to shift the x-axis by the mean value, but I will ommit that in here for simplicity. I will only show how to implement the different packages.</p>
 <pre><code class="language-python"># Choose the &quot;true&quot; parameters.
 m_true = -0.9594
 b_true = 4.294
@@ -812,7 +820,7 @@ plt.xlabel(&quot;x&quot;)
 plt.ylabel(&quot;y&quot;)
 plt.show()
 </code></pre>
-<p><img src="basic_fitting_routines_3_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_4_0.png" alt="png"></p>
 <h2 id="scipy---minimize">scipy - minimize</h2>
 <pre><code class="language-python">def log_likelihood(theta, x, y, yerr):
     m, b = theta
@@ -840,7 +848,7 @@ plt.show()
 print(f'm = {m_pred:.4f} (m_true = {m_true})')
 print(f'b = {b_pred:.3f} (b_true = {b_true})')
 </code></pre>
-<p><img src="basic_fitting_routines_5_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_6_0.png" alt="png"></p>
 <pre><code>m = -0.8139 (m_true = -0.9594)
 b = 3.792 (b_true = 4.294)
 </code></pre>
@@ -870,7 +878,7 @@ plt.show()
 print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
 print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
 </code></pre>
-<p><img src="basic_fitting_routines_7_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_8_0.png" alt="png"></p>
 <pre><code>m = -0.8139 +/- 0.0647 (m_true = -0.9594)
 b = 3.792 +/- 0.344 (b_true = 4.294)
 </code></pre>
@@ -906,7 +914,7 @@ plt.show()
 print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
 print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
 </code></pre>
-<p><img src="basic_fitting_routines_9_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_10_0.png" alt="png"></p>
 <pre><code>m = -0.8139 +/- 0.0127 (m_true = -0.9594)
 b = 3.792 +/- 0.068 (b_true = 4.294)
 </code></pre>
@@ -943,7 +951,7 @@ plt.show()
 print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
 print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
 </code></pre>
-<p><img src="basic_fitting_routines_11_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_12_0.png" alt="png"></p>
 <pre><code>m = -0.8605 +/- inf (m_true = -0.9594)
 b = 4.010 +/- inf (b_true = 4.294)
 </code></pre>
@@ -989,7 +997,18 @@ print(f'b = {b_pred:.3f} +/- ({b_std_min:.3f}, {b_std_max:.3f}) (b_true = {b_tru
 
 minu.draw_mncontour('m', 'b', nsigma=3)
 </code></pre>
-<p><img src="basic_fitting_routines_13_1.png" alt="png"></p>
+<pre><code>/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter m does not have initial value. Assume 0.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter m is floating but does not have initial step size. Assume 1.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter b does not have initial value. Assume 0.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: Parameter b is floating but does not have initial step size. Assume 1.
+  # This is added back by InteractiveShellApp.init_path()
+/home/tomas/anaconda3/envs/pisco/lib/python3.6/site-packages/ipykernel_launcher.py:11: InitialParamWarning: errordef is not given. Default to 1.
+  # This is added back by InteractiveShellApp.init_path()
+</code></pre>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_14_1.png" alt="png"></p>
 <pre><code>Hesse
 m = -0.8139 +/- 0.0127 (m_true = -0.9594)
 b = 3.792 +/- 0.068 (b_true = 4.294)
@@ -1003,7 +1022,7 @@ b = 3.792 +/- (-0.068, 0.068) (b_true = 4.294)
 
 &lt;matplotlib.contour.ContourSet at 0x7fd0b817a208&gt;
 </code></pre>
-<p><img src="basic_fitting_routines_13_4.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_14_4.png" alt="png"></p>
 <hr>
 <hr>
 <h1 id="mcmc-inference">MCMC inference</h1>
@@ -1038,21 +1057,26 @@ with Pool() as pool:
 
 samples = sampler.chain[:, 1000:, :].reshape((-1, ndim))
 </code></pre>
-<pre><code>100%|██████████| 4000/4000 [00:13&lt;00:00, 288.01it/s]
+<pre><code>100%|██████████| 4000/4000 [00:54&lt;00:00, 73.10it/s]
 </code></pre>
-<pre><code class="language-python">cc = ChainConsumer()
-cc.add_chain(samples, parameters=['m', 'b'])
+<pre><code class="language-python">fig, axes = plt.subplots(ndim, figsize=(10, 5), sharex=True)
+labels = [&quot;m&quot;, &quot;b&quot;]
 
-# plot chains
-fig = cc.plotter.plot_walks(truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true}, convolve=100)
-plt.show()
+for i in range(ndim):
+    ax = axes[i]
+    ax.plot(samples[:, i], &quot;k&quot;, alpha=0.6)
+    ax.set_xlim(0, len(samples))
+    ax.set_ylabel(labels[i])
+    ax.yaxis.set_label_coords(-0.1, 0.5)
 
-# plot contours
-fig = cc.plotter.plot(figsize=float(ndim), truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true})
-plt.show()
+axes[-1].set_xlabel(&quot;step number&quot;);
+
+fig = corner.corner(
+    samples, labels=labels, truths=[m_true, b_true]
+);
 </code></pre>
-<p><img src="basic_fitting_routines_17_0.png" alt="png"></p>
-<p><img src="basic_fitting_routines_17_1.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_18_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_18_1.png" alt="png"></p>
 <pre><code class="language-python">m_mcmc = np.percentile(samples[:, 0], [16, 50, 84])
 b_mcmc = np.percentile(samples[:, 1], [16, 50, 84])
 m_pred, b_pred = m_mcmc[1], b_mcmc[1]
@@ -1074,7 +1098,7 @@ plt.show()
 print(f'm = {m_pred:.4f} +/- ({m_std_min:.4f}, {m_std_max:.4f}) (m_true = {m_true})')
 print(f'b = {b_pred:.4f} +/- ({b_std_min:.4f}, {b_std_max:.4f}) (b_true = {b_true})')
 </code></pre>
-<p><img src="basic_fitting_routines_18_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_19_0.png" alt="png"></p>
 <pre><code>m = -0.8131 +/- (0.0127, 0.0124) (m_true = -0.9594)
 b = 3.7896 +/- (0.0679, 0.0674) (b_true = 4.294)
 </code></pre>
@@ -1134,23 +1158,30 @@ plt.show()
 print(f'm = {m_pred:.4f} +/- {m_std:.4f} (m_true = {m_true})')
 print(f'b = {b_pred:.3f} +/- {b_std:.3f} (b_true = {b_true})')
 </code></pre>
-<p><img src="basic_fitting_routines_21_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_22_0.png" alt="png"></p>
 <pre><code>m = -0.7944 +/- 0.0828 (m_true = -0.9594)
 b = 3.595 +/- 0.492 (b_true = 4.294)
 </code></pre>
-<pre><code class="language-python">cc = ChainConsumer()
-cc.add_chain(np.array([m_trace, b_trace]).T, parameters=['m', 'b'])
+<pre><code class="language-python">samples = np.array([m_trace, b_trace]).T
+                   
+fig, axes = plt.subplots(ndim, figsize=(10, 5), sharex=True)
+labels = [&quot;m&quot;, &quot;b&quot;]
 
-# plot chains
-fig = cc.plotter.plot_walks(truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true}, convolve=100)
-plt.show()
+for i in range(ndim):
+    ax = axes[i]
+    ax.plot(samples[:, i], &quot;k&quot;, alpha=0.6)
+    ax.set_xlim(0, len(samples))
+    ax.set_ylabel(labels[i])
+    ax.yaxis.set_label_coords(-0.1, 0.5)
 
-# plot contours
-fig = cc.plotter.plot(figsize=float(ndim), truth={&quot;m&quot;: m_true, &quot;b&quot;: b_true})
-plt.show()
+axes[-1].set_xlabel(&quot;step number&quot;);
+
+fig = corner.corner(
+    samples, labels=labels, truths=[m_true, b_true]
+);
 </code></pre>
-<p><img src="basic_fitting_routines_22_0.png" alt="png"></p>
-<p><img src="basic_fitting_routines_22_1.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_23_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_23_1.png" alt="png"></p>
 <h2 id="pymc3">pymc3</h2>
 <pre><code class="language-python">basic_model = pymc3.Model()
 
@@ -1181,11 +1212,11 @@ pymc3.traceplot(trace);
 pymc3.summary(trace).round(2)
 </code></pre>
 <h2 id="other-packages">Other packages</h2>
-<p>There are other packages for performing MCMC inference like: <code>Pyro/NumPyro</code>, <code>mici</code>, <code>TensorFlow Probability</code> and <code>Sampyl</code>.</p>
+<p>There are other packages for performing MCMC inference like: <code>Pyro/NumPyro</code>, <code>mici</code>, <code>TensorFlow Probability</code> and <code>Sampyl</code> (I might be missing a couple though). Feel free to check those as well.</p>
 <hr>
 <hr>
-<h1 id="neural-networks-regression">Neural Networks regression</h1>
-<p>The NN will fit the data without a given model. A proper fit would require training sets, testing sets and cross validation, but here only the most basic implementation is shown.</p>
+<h1 id="artificial-neural-networks-ann-regression">Artificial Neural Networks (ANN) regression</h1>
+<p>The ANN will fit the data without a given model. A proper fit would require training sets, testing sets and cross validation, but here only the most basic implementation is shown. There is much more you can do with ANN.</p>
 <pre><code class="language-python"># NN model
 model = Sequential()
 model.add(Dense(32, activation = 'relu'))
@@ -1211,7 +1242,7 @@ plt.xlabel(&quot;x&quot;)
 plt.ylabel(&quot;y&quot;)
 plt.show()
 </code></pre>
-<p><img src="basic_fitting_routines_27_0.png" alt="png"></p>
+<p><img src="basic_fitting_routines_files/basic_fitting_routines_28_0.png" alt="png"></p>
 <pre><code class="language-python">
 </code></pre>
 
@@ -1228,8 +1259,6 @@ plt.show()
   
   <a class="badge badge-light" href="/tag/data-science/">data science</a>
   
-  <a class="badge badge-light" href="/tag/hugo/">hugo</a>
-  
 </div>
 
 
@@ -1245,7 +1274,7 @@ plt.show()
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://temuller.github.io/post/fitting_data/&amp;text=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://temuller.github.io/post/fitting_data/&amp;text=Fitting%20Data%20-%20Basic%20implementation%20of%20Python%20packages" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1258,7 +1287,7 @@ plt.show()
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://temuller.github.io/post/fitting_data/&amp;t=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://temuller.github.io/post/fitting_data/&amp;t=Fitting%20Data%20-%20Basic%20implementation%20of%20Python%20packages" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1271,7 +1300,7 @@ plt.show()
       
       
       <li>
-        <a href="mailto:?subject=Fitting%20Data&amp;body=https://temuller.github.io/post/fitting_data/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Fitting%20Data%20-%20Basic%20implementation%20of%20Python%20packages&amp;body=https://temuller.github.io/post/fitting_data/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1284,7 +1313,7 @@ plt.show()
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://temuller.github.io/post/fitting_data/&amp;title=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://temuller.github.io/post/fitting_data/&amp;title=Fitting%20Data%20-%20Basic%20implementation%20of%20Python%20packages" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1297,7 +1326,7 @@ plt.show()
       
       
       <li>
-        <a href="whatsapp://send?text=Fitting%20Data%20https://temuller.github.io/post/fitting_data/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Fitting%20Data%20-%20Basic%20implementation%20of%20Python%20packages%20https://temuller.github.io/post/fitting_data/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1310,7 +1339,7 @@ plt.show()
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://temuller.github.io/post/fitting_data/&amp;title=Fitting%20Data" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://temuller.github.io/post/fitting_data/&amp;title=Fitting%20Data%20-%20Basic%20implementation%20of%20Python%20packages" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

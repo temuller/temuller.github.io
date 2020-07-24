@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/tag/hugo/</loc>
-    <lastmod>2020-07-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://temuller.github.io/post/</loc>
     <lastmod>2020-07-17T00:00:00+00:00</lastmod>
   </url>
@@ -115,6 +110,21 @@
   <url>
     <loc>https://temuller.github.io/author/zsiros-szanna/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/post/astrobites/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/tag/astronomy/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/tag/supernova/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
