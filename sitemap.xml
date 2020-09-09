@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://temuller.github.io/tag/astro/</loc>
+    <lastmod>2020-09-08T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/meeting/</loc>
+    <lastmod>2020-09-08T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/tags/</loc>
+    <lastmod>2020-09-08T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/meeting/student_led_conference_2020/</loc>
+    <lastmod>2020-09-08T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/</loc>
+    <lastmod>2020-09-08T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://temuller.github.io/tag/data-science/</loc>
     <lastmod>2020-07-17T00:00:00+00:00</lastmod>
   </url>
@@ -14,16 +39,6 @@
   
   <url>
     <loc>https://temuller.github.io/post/</loc>
-    <lastmod>2020-07-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/tags/</loc>
-    <lastmod>2020-07-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/</loc>
     <lastmod>2020-07-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -145,11 +160,6 @@
   <url>
     <loc>https://temuller.github.io/talk/charles-university-2018/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/meeting/</loc>
-    <lastmod>2018-04-16T00:00:00+01:00</lastmod>
   </url>
   
   <url>
