@@ -13,12 +13,12 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/post/</loc>
+    <loc>https://temuller.github.io/tag/conference/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://temuller.github.io/tag/supernova/</loc>
+    <loc>https://temuller.github.io/post/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -144,6 +144,11 @@
   
   <url>
     <loc>https://temuller.github.io/post/astrobites/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/tag/supernova/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
