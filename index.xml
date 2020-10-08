@@ -49,6 +49,30 @@
     </item>
     
     <item>
+      <title> SN 2017ivv: two years of evolution of a transitional Type II supernova</title>
+      <link>https://temuller.github.io/publication/gutierrez_2020/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/gutierrez_2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SN 2018gjx reveals that some SNe Ibn are SNe IIb exploding in dense circumstellar material</title>
+      <link>https://temuller.github.io/publication/prentice_2020/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/prentice_2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The tidal disruption event AT 2018hyz - I. Double-peaked emission lines and a flat Balmer decrement</title>
+      <link>https://temuller.github.io/publication/short_2020/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/short_2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fitting Data - Basic implementation of Python packages</title>
       <link>https://temuller.github.io/post/fitting_data/</link>
       <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
@@ -544,6 +568,14 @@ plt.show()
       <description>&lt;p&gt;&lt;strong&gt;P&lt;/strong&gt;ython for &lt;strong&gt;I&lt;/strong&gt;ntelligent &lt;strong&gt;S&lt;/strong&gt;upernova &lt;strong&gt;CO&lt;/strong&gt;smology &lt;strong&gt;L&lt;/strong&gt;ight-curve &lt;strong&gt;A&lt;/strong&gt;nalysis (&lt;strong&gt;PISCOLA&lt;/strong&gt;) is a code I have developed as part of my PhD to fit Type Ia Supernova light curves in a data-driven way using Gaussian Process. The post analysis is done with Non-negative Matrix Factorization, a machine learning approach to extract features/parameters from the rest-frame light curves in order to do cosmology.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>The Tidal Disruption Event AT 2018hyz II: Light-curve modelling of a partially disrupted star</title>
+      <link>https://temuller.github.io/publication/gomez_2020/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/gomez_2020/</guid>
+      <description></description>
     </item>
     
     <item>
