@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oates, S. R. | Tomás E. Müller Bravo</title>
+    <link>https://temuller.github.io/author/oates-s.-r./</link>
+      <atom:link href="https://temuller.github.io/author/oates-s.-r./index.xml" rel="self" type="application/rss+xml" />
+    <description>Oates, S. R.</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2020`</copyright>
+    <image>
+      <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Oates, S. R.</title>
+      <link>https://temuller.github.io/author/oates-s.-r./</link>
+    </image>
+    
+    <item>
+      <title>An outflow powers the optical rise of the nearby, fast-evolving tidal disruption event AT2019qiz</title>
+      <link>https://temuller.github.io/publication/nicholl_2020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/nicholl_2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

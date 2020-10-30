@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://temuller.github.io/publication-type/2/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/publication/mcbrien_2020/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/publication_types/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/publication/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://temuller.github.io/post/student_led_conference/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url>
@@ -28,11 +53,6 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/</loc>
-    <lastmod>2020-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://temuller.github.io/tag/astro/</loc>
     <lastmod>2020-09-08T00:00:00+01:00</lastmod>
   </url>
@@ -53,21 +73,6 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication-type/2/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/publication_types/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/publication/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://temuller.github.io/publication/prentice_2020/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
@@ -75,6 +80,21 @@
   <url>
     <loc>https://temuller.github.io/publication/short_2020/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/authors/</loc>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/author/margutti-raffaella/</loc>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/publication/jacobson_galan_2020/</loc>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -100,11 +120,6 @@
   <url>
     <loc>https://temuller.github.io/project/</loc>
     <lastmod>2020-07-17T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/authors/</loc>
-    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -238,6 +253,14 @@
   </url>
   
   <url>
+    <loc>https://temuller.github.io/author/kilpatrick-charles-d./</loc>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/author/mcbrien-owen.-r./</loc>
+  </url>
+  
+  <url>
     <loc>https://temuller.github.io/author/prentice-s.-j./</loc>
   </url>
   
@@ -270,6 +293,10 @@
   </url>
   
   <url>
+    <loc>https://temuller.github.io/publication/nicholl_2020/</loc>
+  </url>
+  
+  <url>
     <loc>https://temuller.github.io/author/anders-jerkstrand-.../</loc>
   </url>
   
@@ -294,6 +321,14 @@
   </url>
   
   <url>
+    <loc>https://temuller.github.io/author/huber-mark-e./</loc>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/author/jacobson-galan-wynn-v./</loc>
+  </url>
+  
+  <url>
     <loc>https://temuller.github.io/author/jerkstrand-a./</loc>
   </url>
   
@@ -314,6 +349,10 @@
   </url>
   
   <url>
+    <loc>https://temuller.github.io/author/oates-s.-r./</loc>
+  </url>
+  
+  <url>
     <loc>https://temuller.github.io/author/pastorello-a./</loc>
   </url>
   
@@ -326,11 +365,19 @@
   </url>
   
   <url>
+    <loc>https://temuller.github.io/author/smartt-stephen-j./</loc>
+  </url>
+  
+  <url>
     <loc>https://temuller.github.io/author/sukhbold-t./</loc>
   </url>
   
   <url>
     <loc>https://temuller.github.io/author/tomas-e.-muller-bravo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/author/wevers-t./</loc>
   </url>
   
   <url>
