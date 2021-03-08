@@ -5,12 +5,25 @@
     <link>https://temuller.github.io/tag/astro/</link>
       <atom:link href="https://temuller.github.io/tag/astro/index.xml" rel="self" type="application/rss+xml" />
     <description>Astro</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2020`</copyright><lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Astro</title>
       <link>https://temuller.github.io/tag/astro/</link>
     </image>
+    
+    <item>
+      <title>Hubble Tension Workshop</title>
+      <link>https://temuller.github.io/meeting/hubble_tension_2020/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/meeting/hubble_tension_2020/</guid>
+      <description>&lt;p&gt;A 3-days Workshop where researchers from all over the world showed their results from different observational and theoretical experiments to measure H0 and discuss possible biases that might lead to the tension between the measured values from the early and late Universe.&lt;/p&gt;
+&lt;p&gt;Dates: March 01-03, 2021&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sites.google.com/view/a-hubble-tension-headache/home?authuser=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Workshop website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The Big Data Era in Astronomy</title>
