@@ -4,27 +4,27 @@
   
   <url>
     <loc>https://temuller.github.io/tag/astro/</loc>
-    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://temuller.github.io/meeting/hubble_tension_2020/</loc>
-    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+    <loc>https://temuller.github.io/meeting/hubble_tension_2021/</loc>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://temuller.github.io/meeting/</loc>
-    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://temuller.github.io/tags/</loc>
-    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://temuller.github.io/</loc>
-    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -33,17 +33,17 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/mcbrien_2020/</loc>
+    <loc>https://temuller.github.io/other-publications/</loc>
+    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/other-publications/mcbrien_2020/</loc>
     <lastmod>2020-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://temuller.github.io/publication_types/</loc>
-    <lastmod>2020-10-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/publication/</loc>
     <lastmod>2020-10-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,17 +73,17 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/gutierrez_2020/</loc>
+    <loc>https://temuller.github.io/other-publications/gutierrez_2020/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/prentice_2020/</loc>
+    <loc>https://temuller.github.io/other-publications/prentice_2020/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/short_2020/</loc>
+    <loc>https://temuller.github.io/other-publications/short_2020/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -98,7 +98,7 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/jacobson_galan_2020/</loc>
+    <loc>https://temuller.github.io/other-publications/jacobson_galan_2020/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -153,7 +153,7 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/gomez_2020/</loc>
+    <loc>https://temuller.github.io/other-publications/gomez_2020/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/author/mark-sullivan/</loc>
+    <loc>https://temuller.github.io/publication/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -178,7 +178,7 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/pursiainen_2020/</loc>
+    <loc>https://temuller.github.io/other-publications/pursiainen_2020/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -198,17 +198,22 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/project/tess_sn_pipeline/</loc>
+    <loc>https://temuller.github.io/tag/pipeline/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/szalai_2019/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <loc>https://temuller.github.io/project/tessreduce/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://temuller.github.io/author/muller-tomas/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/other-publications/szalai_2019/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -273,7 +278,7 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/kochaneck_2017/</loc>
+    <loc>https://temuller.github.io/other-publications/kochaneck_2017/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -318,11 +323,7 @@
   </url>
   
   <url>
-    <loc>https://temuller.github.io/publication/nicholl_2020/</loc>
-  </url>
-  
-  <url>
-    <loc>https://temuller.github.io/author/anders-jerkstrand-.../</loc>
+    <loc>https://temuller.github.io/other-publications/nicholl_2020/</loc>
   </url>
   
   <url>
@@ -367,6 +368,10 @@
   
   <url>
     <loc>https://temuller.github.io/author/maguire-k./</loc>
+  </url>
+  
+  <url>
+    <loc>https://temuller.github.io/author/mark-sullivan-et-al./</loc>
   </url>
   
   <url>

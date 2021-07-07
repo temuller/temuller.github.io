@@ -5,7 +5,7 @@
     <link>https://temuller.github.io/</link>
       <atom:link href="https://temuller.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Tomás E. Müller Bravo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Tomás E. Müller Bravo</title>
@@ -14,9 +14,9 @@
     
     <item>
       <title>Hubble Tension Workshop</title>
-      <link>https://temuller.github.io/meeting/hubble_tension_2020/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/meeting/hubble_tension_2020/</guid>
+      <link>https://temuller.github.io/meeting/hubble_tension_2021/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/meeting/hubble_tension_2021/</guid>
       <description>&lt;p&gt;A 3-days Workshop where researchers from all over the world showed their results from different observational and theoretical experiments to measure H0 and discuss possible biases that might lead to the tension between the measured values from the early and late Universe.&lt;/p&gt;
 &lt;p&gt;Dates: March 01-03, 2021&lt;/p&gt;
 &lt;p&gt;
@@ -27,9 +27,9 @@
     
     <item>
       <title>PS15cey and PS17cke: prospective candidates from the Pan-STARRS Search for Kilonovae</title>
-      <link>https://temuller.github.io/publication/mcbrien_2020/</link>
+      <link>https://temuller.github.io/other-publications/mcbrien_2020/</link>
       <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/mcbrien_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/mcbrien_2020/</guid>
       <description></description>
     </item>
     
@@ -71,33 +71,33 @@
     
     <item>
       <title> SN 2017ivv: two years of evolution of a transitional Type II supernova</title>
-      <link>https://temuller.github.io/publication/gutierrez_2020/</link>
+      <link>https://temuller.github.io/other-publications/gutierrez_2020/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/gutierrez_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/gutierrez_2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SN 2018gjx reveals that some SNe Ibn are SNe IIb exploding in dense circumstellar material</title>
-      <link>https://temuller.github.io/publication/prentice_2020/</link>
+      <link>https://temuller.github.io/other-publications/prentice_2020/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/prentice_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/prentice_2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The tidal disruption event AT 2018hyz - I. Double-peaked emission lines and a flat Balmer decrement</title>
-      <link>https://temuller.github.io/publication/short_2020/</link>
+      <link>https://temuller.github.io/other-publications/short_2020/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/short_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/short_2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SN 2019ehk: A Double-peaked Ca-rich Transient with Luminous X-Ray Emission and Shock-ionized Spectral Features </title>
-      <link>https://temuller.github.io/publication/jacobson_galan_2020/</link>
+      <link>https://temuller.github.io/other-publications/jacobson_galan_2020/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/jacobson_galan_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/jacobson_galan_2020/</guid>
       <description></description>
     </item>
     
@@ -611,9 +611,9 @@ plt.show()
     
     <item>
       <title>The Tidal Disruption Event AT 2018hyz II: Light-curve modelling of a partially disrupted star</title>
-      <link>https://temuller.github.io/publication/gomez_2020/</link>
+      <link>https://temuller.github.io/other-publications/gomez_2020/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/gomez_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/gomez_2020/</guid>
       <description></description>
     </item>
     
@@ -627,9 +627,9 @@ plt.show()
     
     <item>
       <title>The mystery of photometric twins DES17X1boj and DES16E2bjy</title>
-      <link>https://temuller.github.io/publication/pursiainen_2020/</link>
+      <link>https://temuller.github.io/other-publications/pursiainen_2020/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/pursiainen_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/pursiainen_2020/</guid>
       <description></description>
     </item>
     
@@ -653,20 +653,20 @@ plt.show()
     </item>
     
     <item>
-      <title>TESS SN Pipeline</title>
-      <link>https://temuller.github.io/project/tess_sn_pipeline/</link>
+      <title>TESSreduce</title>
+      <link>https://temuller.github.io/project/tessreduce/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/project/tess_sn_pipeline/</guid>
-      <description>&lt;p&gt;The Transitin Exoplanet Survey Satellite (TESS) produces light curves with unprecedented cadence. This is ideal for studying supernovae, but there is not dedicated pipeline to extract and reduce the data of these transients. I have been working on this project with other people from the USA.&lt;/p&gt;
+      <guid>https://temuller.github.io/project/tessreduce/</guid>
+      <description>&lt;p&gt;The Transitin Exoplanet Survey Satellite (TESS) produces light curves with unprecedented cadence. This is ideal for studying supernovae, but there is not dedicated pipeline to extract and reduce the data of these transients. I have worked on this project, led by Ryan Ridden-Harper.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>A Comprehensive Analysis of Spitzer Supernovae</title>
-      <link>https://temuller.github.io/publication/szalai_2019/</link>
+      <link>https://temuller.github.io/other-publications/szalai_2019/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/szalai_2019/</guid>
+      <guid>https://temuller.github.io/other-publications/szalai_2019/</guid>
       <description></description>
     </item>
     
@@ -764,17 +764,17 @@ plt.show()
     
     <item>
       <title>Supernova progenitors, their variability and the Type IIP Supernova ASASSN-16fq in M66 </title>
-      <link>https://temuller.github.io/publication/kochaneck_2017/</link>
+      <link>https://temuller.github.io/other-publications/kochaneck_2017/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/kochaneck_2017/</guid>
+      <guid>https://temuller.github.io/other-publications/kochaneck_2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An outflow powers the optical rise of the nearby, fast-evolving tidal disruption event AT2019qiz</title>
-      <link>https://temuller.github.io/publication/nicholl_2020/</link>
+      <link>https://temuller.github.io/other-publications/nicholl_2020/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/nicholl_2020/</guid>
+      <guid>https://temuller.github.io/other-publications/nicholl_2020/</guid>
       <description></description>
     </item>
     
