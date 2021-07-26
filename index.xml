@@ -5,12 +5,36 @@
     <link>https://temuller.github.io/</link>
       <atom:link href="https://temuller.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Tomás E. Müller Bravo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0100</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Tomás E. Müller Bravo</title>
       <link>https://temuller.github.io/</link>
     </image>
+    
+    <item>
+      <title>Exploring the Exploding Transients Diversity with Next-Generation Facilities</title>
+      <link>https://temuller.github.io/meeting/nam_2021/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0100</pubDate>
+      <guid>https://temuller.github.io/meeting/nam_2021/</guid>
+      <description>&lt;p&gt;With the current plethora of all-sky surveys and upcoming next-generation facilities, (such as LSST, GOTO, TiDES, and SOXS), the area, depth, and cadence covered by the observations continue to improve. With these improvements comes an increasing number of poorly-understood events discovered such as tidal disruption events, Ca-rich transients, superluminous SNe, rapidly evolving transients, kilonovae, and other peculiar transients. Hence, an ever-increasing focus of the time-domain community is in exploring this diversity and populating the Luminosity-Timescale phase space with these and other “gap” transients and understanding their powering mechanisms, progenitors, and environments in which they are found, from an observational and theoretical point of view. These next-generation facilities will play a crucial role in exploring these issues. Therefore, the goal of this session is to create a space to foster collaboration and discuss these uncommon types of transients, what we have learnt about them, and how to direct future research, theoretical modelling and observations with the next-generation facilities towards a better understanding of them. As part of our commitment to improving the equality, diversity and inclusivity of our field, we will take active measures to provide a platform for scientists from groups that are typically underrepresented in astronomy, including but not limited to women as well as ethnic minorities. We also particularly encourage early career researchers to apply.&lt;/p&gt;
+&lt;p&gt;Organisers: Tomás Enrique Müller Bravo, Mark Magee, Claudia Gutiérrez, Phil Wiseman, Matt Grayling, Chris Frohmaier, Shubham Srivastav&lt;/p&gt;
+&lt;p&gt;Dates: July 23, 2021&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://nam2021.org/science/parallel-sessions/details/2/83&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Session website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DES 3YR sample analysis with PISCOLA</title>
+      <link>https://temuller.github.io/project/des_analysis/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0100</pubDate>
+      <guid>https://temuller.github.io/project/des_analysis/</guid>
+      <description>&lt;p&gt;Here I present the analisys of DES SNe with PISCOLA. The idea of this book is to show the whole process of working in a project and making the whole analysis as transparent as possible.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hubble Tension Workshop</title>
