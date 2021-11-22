@@ -5,7 +5,7 @@
     <link>https://temuller.github.io/tag/pipeline/</link>
       <atom:link href="https://temuller.github.io/tag/pipeline/index.xml" rel="self" type="application/rss+xml" />
     <description>Pipeline</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0100</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Pipeline</title>
@@ -15,7 +15,7 @@
     <item>
       <title>PESSTO data-reduction pipeline</title>
       <link>https://temuller.github.io/project/pessto/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
       <guid>https://temuller.github.io/project/pessto/</guid>
       <description>&lt;p&gt;Pipeline for the reduction of data from the New Technology Telescope (La Silla observatory, Chile). The original pipeline was developed by Stephano Valenti as part of the PESSTO collaboration. I am the current developer and manager of this pipeline as part of ePESSTO+ collaboration.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
@@ -25,7 +25,7 @@
     <item>
       <title>TESSreduce</title>
       <link>https://temuller.github.io/project/tessreduce/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
       <guid>https://temuller.github.io/project/tessreduce/</guid>
       <description>&lt;p&gt;The Transitin Exoplanet Survey Satellite (TESS) produces light curves with unprecedented cadence. This is ideal for studying supernovae, but there is not dedicated pipeline to extract and reduce the data of these transients. I have worked on this project, led by Ryan Ridden-Harper.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
