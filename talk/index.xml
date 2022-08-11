@@ -5,12 +5,21 @@
     <link>https://temuller.github.io/talk/</link>
       <atom:link href="https://temuller.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Wed, 05 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://temuller.github.io/talk/</link>
     </image>
+    
+    <item>
+      <title>A Comprehensive Analysis of Type Ia Supernovae in the Near-Infrared: testing their homogeneity and exploring further corrections for accurate distance estimations</title>
+      <link>https://temuller.github.io/talk/max-planck-institute-for-astrophysics-2022/</link>
+      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/talk/max-planck-institute-for-astrophysics-2022/</guid>
+      <description>&lt;p&gt;Max Planck Institute for Astrophysics, Garching, Germany (online)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Building a Type Ia Supernova Hubble Diagram with PISCoLA</title>

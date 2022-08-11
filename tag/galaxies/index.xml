@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Galaxies | Tomás E. Müller Bravo</title>
+    <link>https://temuller.github.io/tag/galaxies/</link>
+      <atom:link href="https://temuller.github.io/tag/galaxies/index.xml" rel="self" type="application/rss+xml" />
+    <description>Galaxies</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Fri, 17 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
+      <title>Galaxies</title>
+      <link>https://temuller.github.io/tag/galaxies/</link>
+    </image>
+    
+    <item>
+      <title>HostPhot</title>
+      <link>https://temuller.github.io/project/hostphot/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/hostphot/</guid>
+      <description>&lt;p&gt;I have developed HostPhot during my postdoc at ICE, Barcelona, with the help of Lluís Galbany. The main purpose of this code is to do local and global photometry for the host galaxy of SNe Ia, although it can be used for other purposes.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

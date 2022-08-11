@@ -5,12 +5,29 @@
     <link>https://temuller.github.io/</link>
       <atom:link href="https://temuller.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Tomás E. Müller Bravo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2021`</copyright><lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://temuller.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
       <title>Tomás E. Müller Bravo</title>
       <link>https://temuller.github.io/</link>
     </image>
+    
+    <item>
+      <title>A Comprehensive Analysis of Type Ia Supernovae in the Near-Infrared: testing their homogeneity and exploring further corrections for accurate distance estimations</title>
+      <link>https://temuller.github.io/talk/max-planck-institute-for-astrophysics-2022/</link>
+      <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/talk/max-planck-institute-for-astrophysics-2022/</guid>
+      <description>&lt;p&gt;Max Planck Institute for Astrophysics, Garching, Germany (online)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Testing the Homogeneity of Type Ia Supernovae in the Near-Infrared for Accurate Distance Estimations </title>
+      <link>https://temuller.github.io/publication/muller_bravo_2022/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/muller_bravo_2022/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PISCOLA: a data-driven transient light-curve fitter</title>
@@ -23,7 +40,7 @@
     <item>
       <title>Exploring the Exploding Transients Diversity with Next-Generation Facilities</title>
       <link>https://temuller.github.io/meeting/nam_2021/</link>
-      <pubDate>Fri, 23 Jul 2021 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/meeting/nam_2021/</guid>
       <description>&lt;p&gt;With the current plethora of all-sky surveys and upcoming next-generation facilities, (such as LSST, GOTO, TiDES, and SOXS), the area, depth, and cadence covered by the observations continue to improve. With these improvements comes an increasing number of poorly-understood events discovered such as tidal disruption events, Ca-rich transients, superluminous SNe, rapidly evolving transients, kilonovae, and other peculiar transients. Hence, an ever-increasing focus of the time-domain community is in exploring this diversity and populating the Luminosity-Timescale phase space with these and other “gap” transients and understanding their powering mechanisms, progenitors, and environments in which they are found, from an observational and theoretical point of view. These next-generation facilities will play a crucial role in exploring these issues. Therefore, the goal of this session is to create a space to foster collaboration and discuss these uncommon types of transients, what we have learnt about them, and how to direct future research, theoretical modelling and observations with the next-generation facilities towards a better understanding of them. As part of our commitment to improving the equality, diversity and inclusivity of our field, we will take active measures to provide a platform for scientists from groups that are typically underrepresented in astronomy, including but not limited to women as well as ethnic minorities. We also particularly encourage early career researchers to apply.&lt;/p&gt;
 &lt;p&gt;Organisers: Tomás Enrique Müller Bravo, Mark Magee, Claudia Gutiérrez, Phil Wiseman, Matt Grayling, Chris Frohmaier, Shubham Srivastav&lt;/p&gt;
@@ -35,19 +52,9 @@
     </item>
     
     <item>
-      <title>DES 3YR sample analysis with PISCOLA</title>
-      <link>https://temuller.github.io/project/des_analysis/</link>
-      <pubDate>Wed, 21 Jul 2021 00:00:00 +0200</pubDate>
-      <guid>https://temuller.github.io/project/des_analysis/</guid>
-      <description>&lt;p&gt;Here I present the analisys of DES SNe with PISCOLA. The idea of this book is to show the whole process of working in a project and making the whole analysis as transparent as possible.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Hubble Tension Workshop</title>
       <link>https://temuller.github.io/meeting/hubble_tension_2021/</link>
-      <pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/meeting/hubble_tension_2021/</guid>
       <description>&lt;p&gt;A 3-days Workshop where researchers from all over the world showed their results from different observational and theoretical experiments to measure H0 and discuss possible biases that might lead to the tension between the measured values from the early and late Universe.&lt;/p&gt;
 &lt;p&gt;Dates: March 01-03, 2021&lt;/p&gt;
@@ -91,7 +98,7 @@
     <item>
       <title>The Big Data Era in Astronomy</title>
       <link>https://temuller.github.io/meeting/student_led_conference_2020/</link>
-      <pubDate>Tue, 08 Sep 2020 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/meeting/student_led_conference_2020/</guid>
       <description>&lt;p&gt;Every year a student-led conference that lasts for 2 and a half days is hosted at the University of Southampton which PGR students from SEPnet can attend to dig into the world of research conferences. I was the lead organizer in a committee of PGR students from the University of Southampton and University of Hertfordshire. Because of the COVID-19 pandemic we had to host a one-day conference online.&lt;/p&gt;
 &lt;p&gt;Dates: Sep 8, 2020&lt;/p&gt;
@@ -622,9 +629,19 @@ plt.show()
     </item>
     
     <item>
+      <title>HostPhot</title>
+      <link>https://temuller.github.io/project/hostphot/</link>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/hostphot/</guid>
+      <description>&lt;p&gt;I have developed HostPhot during my postdoc at ICE, Barcelona, with the help of Lluís Galbany. The main purpose of this code is to do local and global photometry for the host galaxy of SNe Ia, although it can be used for other purposes.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>PISCOLA</title>
       <link>https://temuller.github.io/project/piscola/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/project/piscola/</guid>
       <description>&lt;p&gt;&lt;strong&gt;P&lt;/strong&gt;ython for &lt;strong&gt;I&lt;/strong&gt;ntelligent &lt;strong&gt;S&lt;/strong&gt;upernova &lt;strong&gt;CO&lt;/strong&gt;smology &lt;strong&gt;L&lt;/strong&gt;ight-curve &lt;strong&gt;A&lt;/strong&gt;nalysis (&lt;strong&gt;PISCOLA&lt;/strong&gt;) is a code I have developed as part of my PhD to fit Type Ia supernova light curves in a data-driven way using Gaussian Process. The post analysis is done with Non-negative Matrix Factorization, a machine learning approach to extract features/parameters from the rest-frame light curves in order to do cosmology (Müller-Bravo et al., in prep.).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
@@ -634,7 +651,7 @@ plt.show()
     <item>
       <title>Type II supernova fitting code</title>
       <link>https://temuller.github.io/project/snii_fit/</link>
-      <pubDate>Fri, 17 Jul 2020 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/project/snii_fit/</guid>
       <description>&lt;p&gt;Type II supernova fitting code by Ondrej Pejcha. I contributed some minor modifications and am currently hosting the repository with the code.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
@@ -677,7 +694,7 @@ plt.show()
     <item>
       <title>PESSTO data-reduction pipeline</title>
       <link>https://temuller.github.io/project/pessto/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/project/pessto/</guid>
       <description>&lt;p&gt;Pipeline for the reduction of data from the New Technology Telescope (La Silla observatory, Chile). The original pipeline was developed by Stephano Valenti as part of the PESSTO collaboration. I am the current developer and manager of this pipeline as part of ePESSTO+ collaboration.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
@@ -687,7 +704,7 @@ plt.show()
     <item>
       <title>TESSreduce</title>
       <link>https://temuller.github.io/project/tessreduce/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/project/tessreduce/</guid>
       <description>&lt;p&gt;The Transitin Exoplanet Survey Satellite (TESS) produces light curves with unprecedented cadence. This is ideal for studying supernovae, but there is not dedicated pipeline to extract and reduce the data of these transients. I have worked on this project, led by Ryan Ridden-Harper.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
@@ -763,7 +780,7 @@ plt.show()
     <item>
       <title>Software Carpentry Workshop</title>
       <link>https://temuller.github.io/meeting/scw_max_planck_2018/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/meeting/scw_max_planck_2018/</guid>
       <description>&lt;p&gt;A 2-days Software Carpentry Workshop to teach PGR students at the Max Planck Institute for Plasma Physics (Greifswald) the basic of Shell, Python and Git.&lt;/p&gt;
 &lt;p&gt;Dates: Apr 16-17, 2018&lt;/p&gt;
@@ -776,7 +793,7 @@ plt.show()
     <item>
       <title>Software Carpentry Workshop</title>
       <link>https://temuller.github.io/meeting/scw_soton_2018/</link>
-      <pubDate>Thu, 12 Apr 2018 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/meeting/scw_soton_2018/</guid>
       <description>&lt;p&gt;A 2-days Software Carpentry Workshop to teach PGR students at the University of Southampton the basic of Shell, Python and Git.&lt;/p&gt;
 &lt;p&gt;Dates: Apr 12-13, 2018&lt;/p&gt;
