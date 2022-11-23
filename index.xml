@@ -5,12 +5,21 @@
     <link>https://temuller.github.io/</link>
       <atom:link href="https://temuller.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Tomás E. Müller Bravo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Wed, 02 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
       <title>Tomás E. Müller Bravo</title>
       <link>https://temuller.github.io/</link>
     </image>
+    
+    <item>
+      <title>An Overview of Supernova Cosmology</title>
+      <link>https://temuller.github.io/talk/granada-2022/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/talk/granada-2022/</guid>
+      <description>&lt;p&gt;VIII Meeting on Fundamental Cosmology, Granada, Spain&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A Comprehensive Analysis of Type Ia Supernovae in the Near-Infrared: testing their homogeneity and exploring further corrections for accurate distance estimations</title>
