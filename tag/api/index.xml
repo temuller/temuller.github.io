@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API | Tomás E. Müller Bravo</title>
+    <link>https://temuller.github.io/tag/api/</link>
+      <atom:link href="https://temuller.github.io/tag/api/index.xml" rel="self" type="application/rss+xml" />
+    <description>API</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2023`</copyright><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
+      <title>API</title>
+      <link>https://temuller.github.io/tag/api/</link>
+    </image>
+    
+    <item>
+      <title>SVO API</title>
+      <link>https://temuller.github.io/project/svo_api/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/svo_api/</guid>
+      <description>&lt;p&gt;The Spanish Vistual Observatory (SVO) is and astronomical archive and collaboration manage by a Spanish institution. This code is a python API to download SVO filters.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TNS API</title>
+      <link>https://temuller.github.io/project/tns_api/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/tns_api/</guid>
+      <description>&lt;p&gt;Transient Name Server (TNS) is the official IAU mechanism for reporting new astronomical transients such as supernova candidates. This code is a python API to easily access this archive and retrieve information.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WISeREP API</title>
+      <link>https://temuller.github.io/project/wiserep_api/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/wiserep_api/</guid>
+      <description>&lt;p&gt;The Weizmann Interactive Supernova Data Repository (WISeREP) serves as an archive of SN spectra and photometry, including both historical (legacy) data and data that are accumulated by ongoing modern surveys and programs. This code is a python API to easily access this archive and retrieve information.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

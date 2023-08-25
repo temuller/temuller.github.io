@@ -5,12 +5,22 @@
     <link>https://temuller.github.io/tag/pipeline/</link>
       <atom:link href="https://temuller.github.io/tag/pipeline/index.xml" rel="self" type="application/rss+xml" />
     <description>Pipeline</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2023`</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
       <title>Pipeline</title>
       <link>https://temuller.github.io/tag/pipeline/</link>
     </image>
+    
+    <item>
+      <title>IDSRed</title>
+      <link>https://temuller.github.io/project/idsred/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/idsred/</guid>
+      <description>&lt;p&gt;This is a spectroscopic data-reduction pipeline for the Isaac Newton Telescope (INT) Intermediate Dispersion Spectrograph (IDS) instrument. It is optimised for the blue detector (EEV10).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PESSTO data-reduction pipeline</title>

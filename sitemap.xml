@@ -2,38 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://temuller.github.io/tag/astro/</loc>
+    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/meeting/eas_2023/</loc>
+    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/meeting/</loc>
+    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/tags/</loc>
+    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/</loc>
+    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/talk/national-central-university-2023/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/talk/</loc>
+    <lastmod>2023-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/tag/api/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/project/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/tag/supernovae/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/project/svo_api/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/project/tns_api/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/project/wiserep_api/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://temuller.github.io/talk/granada-2022/</loc>
     <lastmod>2022-11-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://temuller.github.io/talk/</loc>
-    <lastmod>2022-11-02T00:00:00+00:00</lastmod>
+    <loc>https://temuller.github.io/publication-type/2/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://temuller.github.io/</loc>
-    <lastmod>2022-11-02T00:00:00+00:00</lastmod>
+    <loc>https://temuller.github.io/authors/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/author/lluis-galbany/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/publication_types/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/publication/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/publication/muller_bravo_2022/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/author/tomas-e.-muller-bravo/</loc>
+    <lastmod>2022-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/publication/muller_bravo_2022b/</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://temuller.github.io/talk/max-planck-institute-for-astrophysics-2022/</loc>
     <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/publication-type/2/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/authors/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/author/lluis-galbany/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/publication_types/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/publication/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/publication/muller_bravo_2022/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/author/tomas-e.-muller-bravo/</loc>
-    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://temuller.github.io/author/mark-sullivan/</loc>
     <lastmod>2021-11-22T00:00:00+00:00</lastmod>
@@ -41,16 +77,7 @@
     <loc>https://temuller.github.io/publication/muller_bravo_2021/</loc>
     <lastmod>2021-11-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://temuller.github.io/tag/astro/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://temuller.github.io/meeting/nam_2021/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/meeting/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/tags/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://temuller.github.io/meeting/hubble_tension_2021/</loc>
@@ -110,12 +137,6 @@
     <loc>https://temuller.github.io/project/piscola/</loc>
     <lastmod>2020-07-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://temuller.github.io/project/</loc>
-    <lastmod>2020-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://temuller.github.io/tag/supernovae/</loc>
-    <lastmod>2020-07-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://temuller.github.io/project/snii_fit/</loc>
     <lastmod>2020-07-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -142,6 +163,9 @@
   </url><url>
     <loc>https://temuller.github.io/talk/imperial-college-london-2020/</loc>
     <lastmod>2020-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://temuller.github.io/project/idsred/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://temuller.github.io/project/pessto/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>

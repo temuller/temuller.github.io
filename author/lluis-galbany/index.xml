@@ -5,7 +5,7 @@
     <link>https://temuller.github.io/author/lluis-galbany/</link>
       <atom:link href="https://temuller.github.io/author/lluis-galbany/index.xml" rel="self" type="application/rss+xml" />
     <description>Lluís Galbany</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2023`</copyright><lastBuildDate>Thu, 01 Sep 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
       <title>Lluís Galbany</title>
@@ -15,8 +15,16 @@
     <item>
       <title>Testing the Homogeneity of Type Ia Supernovae in the Near-Infrared for Accurate Distance Estimations </title>
       <link>https://temuller.github.io/publication/muller_bravo_2022/</link>
-      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/publication/muller_bravo_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HostPhot: global and local photometry of galaxies hosting supernovae or other transients</title>
+      <link>https://temuller.github.io/publication/muller_bravo_2022b/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/publication/muller_bravo_2022b/</guid>
       <description></description>
     </item>
     

@@ -5,12 +5,42 @@
     <link>https://temuller.github.io/project/</link>
       <atom:link href="https://temuller.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2022`</copyright><lastBuildDate>Fri, 17 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2023`</copyright><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
       <link>https://temuller.github.io/project/</link>
     </image>
+    
+    <item>
+      <title>SVO API</title>
+      <link>https://temuller.github.io/project/svo_api/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/svo_api/</guid>
+      <description>&lt;p&gt;The Spanish Vistual Observatory (SVO) is and astronomical archive and collaboration manage by a Spanish institution. This code is a python API to download SVO filters.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TNS API</title>
+      <link>https://temuller.github.io/project/tns_api/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/tns_api/</guid>
+      <description>&lt;p&gt;Transient Name Server (TNS) is the official IAU mechanism for reporting new astronomical transients such as supernova candidates. This code is a python API to easily access this archive and retrieve information.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WISeREP API</title>
+      <link>https://temuller.github.io/project/wiserep_api/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/wiserep_api/</guid>
+      <description>&lt;p&gt;The Weizmann Interactive Supernova Data Repository (WISeREP) serves as an archive of SN spectra and photometry, including both historical (legacy) data and data that are accumulated by ongoing modern surveys and programs. This code is a python API to easily access this archive and retrieve information.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>HostPhot</title>
@@ -38,6 +68,16 @@
       <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://temuller.github.io/project/snii_fit/</guid>
       <description>&lt;p&gt;Type II supernova fitting code by Ondrej Pejcha. I contributed some minor modifications and am currently hosting the repository with the code.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IDSRed</title>
+      <link>https://temuller.github.io/project/idsred/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://temuller.github.io/project/idsred/</guid>
+      <description>&lt;p&gt;This is a spectroscopic data-reduction pipeline for the Isaac Newton Telescope (INT) Intermediate Dispersion Spectrograph (IDS) instrument. It is optimised for the blue detector (EEV10).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Press the tag below to see more examples&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
