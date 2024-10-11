@@ -5,20 +5,12 @@
     <link>https://temuller.github.io/author/mathew-smith-et-al./</link>
       <atom:link href="https://temuller.github.io/author/mathew-smith-et-al./index.xml" rel="self" type="application/rss+xml" />
     <description>Mathew Smith et al.</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2023`</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-gb</language><copyright>© Tomás Müller `2024`</copyright>
     <image>
       <url>https://temuller.github.io/images/icon_hu0d997de58f0740f569fcf02a571fbab0_20391_512x512_fill_lanczos_center_3.png</url>
       <title>Mathew Smith et al.</title>
       <link>https://temuller.github.io/author/mathew-smith-et-al./</link>
     </image>
-    
-    <item>
-      <title>PISCOLA: a data-driven transient light-curve fitter</title>
-      <link>https://temuller.github.io/publication/muller_bravo_2021/</link>
-      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://temuller.github.io/publication/muller_bravo_2021/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
